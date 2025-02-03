@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Blow the Candle</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Blow the Candle</h1>
+    <div class="glow" id="glow"></div>
+    <div id="candle">
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div id="top">
+            <div class="smoke"></div>
+            <div class="smoke"></div>
+            <div class="smoke"></div>
+            <div id="knot"></div>
+            <div class="burn" id="flame"></div>
+        </div>
+    </div>
+
+    <script>
+     
+        function blowOutFlame() {
+            const flame = document.getElementById("flame");
+            flame.style.opacity = "0"; 
+            setTimeout(() => {
+                window.location.href = "flower.html"; 
+            }, 4000); 
+        }
+
+       
+        document.getElementById("candle").addEventListener("click", blowOutFlame);
+    </script>
+</body>
+</html>
